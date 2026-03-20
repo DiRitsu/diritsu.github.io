@@ -1,3 +1,10 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
+
 Hi, I'm IV, Datacenter network architect/engineer.
 My specialization is the design and implementation of network architecture for small and medium data centers.
 
