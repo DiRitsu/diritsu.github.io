@@ -9,13 +9,13 @@ date: 2026-02-20
 
 Hello.
 
-I want to start this blog as a reminder to myself of what problems and solutions were encountered during some of the worst searcing and testing sessions. And what can be better than his majesty broadcast storm.  
+I want to start this blog as a reminder to myself of what problems and solutions were encountered during some of the worst searcing and testing sessions. And what can be better to start with than his majesty broadcast storm.  
 
-For the external switches EVPN/VXLAN fabric usually looks like a one big L3 switch. BGW can use L3 external ports, but standard core-to-fabric connection? There is a standard SVI way, redundant connections, but the problem:
+For the external switches EVPN/VXLAN fabric usually looks like a one big L3 switch. BGW can use L3 external ports, but standard core-to-fabric connection? There is a standard SVI way, redundant connections, the problem is:
 
 Fabric will happily create a loop.
 
-STP if not disabled already has different switch ID on different fabric switches. so no ports are blocked. BPDUs are not transferred via fabric so there is no way core switch knows that there is a loop.
+STP, if not disabled already, has different switch ID on different fabric switches. So no ports are blocked. BPDUs are not transferred via fabric so there is no way core switch knows that there is a loop.
 
 This is not a new theme as you can see it in the useful [ipspace blog](https://blog.ipspace.net/2019/02/loop-avoidance-in-vxlan-networks/).
 
